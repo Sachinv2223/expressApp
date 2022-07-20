@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
 const port = 4200;
+const logger = (req,res,next) => {
+    console.log(req.path)
+}
+
+app.use(logger);
 
 app.get('/',(req,res) => {
     res.send('string send')
