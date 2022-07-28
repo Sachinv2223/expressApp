@@ -1,5 +1,6 @@
-const bodyParser = require('body-parser');
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const app = express();
 
 //very important when you use json file
@@ -33,5 +34,5 @@ app.get('/json',(req,res) => {
 })
 
 app.listen(port, () => {
-    console.log(`Example app listening on port 4200`)
+    console.log(`Example app listening on port ${port}`)
   })
